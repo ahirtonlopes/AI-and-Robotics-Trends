@@ -26,7 +26,15 @@ A disciplina percorre IA, Machine Learning e Deep Learning com olhar de seguran�
 ```
 Datasets/    bases usadas pelas demos
 Notebooks/   demos práticas, prontas para rodar no Google Colab
+Slides/      decks das aulas
 ```
+
+> O deck publicado aqui omite as figuras de terceiros (Hype Cycle do Gartner, tiras, memes e mapas de outras fontes), que foram substituídas por versões em texto. Por isso a numeração e o número de slides diferem da versão apresentada em aula.
+
+| Aula | Deck |
+|---|---|
+| 1 | [IA, ML e segurança](Slides/Aula1_IA_ML_e_Seguranca.pptx) |
+| 2 a 4 | em preparação |
 
 ## Demos
 
