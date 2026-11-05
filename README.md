@@ -53,7 +53,7 @@ As Demos 1 e 2 são sequenciais: a Demo 2 começa recriando o modelo da Demo 1. 
 
 ## Como rodar
 
-Cada notebook abre direto no Google Colab (botão acima). As Demos 1 e 2 baixam as bases sozinhas: a Kaggle URL Dataset vem deste repositório e a PhiUSIIL vem do UCI. Nas demais, a célula de upload pede o arquivo correspondente da pasta `Datasets/`.
+Cada notebook abre direto no Google Colab (botão acima). Todos os notebooks baixam as bases sozinhos: as do curso vêm da pasta `Datasets/` deste repositório (via `curl` ou `read_csv` com a URL raw) e a PhiUSIIL vem do UCI. Não é preciso subir arquivo na mão. A Demo 6 usa o CIFAR-10 embutido no Keras.
 
 Para rodar localmente:
 
