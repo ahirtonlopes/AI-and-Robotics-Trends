@@ -16,7 +16,7 @@ A disciplina percorre IA, Machine Learning e Deep Learning com olhar de seguran�
 | Aula | Tema |
 |---|---|
 | 1 | IA, Machine Learning e segurança (Demos 1 e 2, já disponível) |
-| 2 | Aprendizado supervisionado, métricas que importam, regressão logística e árvores (Demos 3 e 4, já disponível) |
+| 2 | Aprendizado supervisionado e não supervisionado, métricas que importam, regressão logística, árvores e K-Means (Demos 3 a 5, já disponível) |
 | 3 | Deep Learning e o modelo como superfície de ataque (em preparação) |
 | 4 | Segurança de sistemas agênticos e autônomos, Robotics Trends (em preparação) |
 
@@ -43,12 +43,13 @@ Slides/      decks das aulas
 | [Demo 2](Notebooks/Demo2_URL_Phishing_PhiUSIIL.ipynb) | O modelo funciona fora do laboratório? (PhiUSIIL) | Rótulo invertido, teste entre bases (dataset shift), viés de coleta, limiar de decisão, ataque adversarial de evasão | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ahirtonlopes/AI-and-Robotics-Trends/blob/main/Notebooks/Demo2_URL_Phishing_PhiUSIIL.ipynb) |
 | [Demo 3](Notebooks/Demo3_Fraud_Detection.ipynb) | Fraude em pagamentos: o que um resultado de 100% esconde | Regressão logística, árvore de decisão, baseline trivial, matriz de confusão, vazamento de dados, limiar de decisão | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ahirtonlopes/AI-and-Robotics-Trends/blob/main/Notebooks/Demo3_Fraud_Detection.ipynb) |
 | [Demo 4](Notebooks/Demo4_Attack_Detection.ipynb) | Detecção de ataques de rede (UNSW-NB15) em duas camadas | Árvore de decisão com GridSearch por recall, regras interpretáveis, Random Forest, XGBoost, LightGBM, bootstrap do recall | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ahirtonlopes/AI-and-Robotics-Trends/blob/main/Notebooks/Demo4_Attack_Detection.ipynb) |
+| [Demo 5](Notebooks/Demo5_Agrupamento_KDD99.ipynb) | Agrupando tráfego de rede sem rótulo (KDD Cup 99) | K-Means, cotovelo e silhouette, PCA, pureza dos grupos, heurística de grupos pequenos, Isolation Forest | [![Abrir no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ahirtonlopes/AI-and-Robotics-Trends/blob/main/Notebooks/Demo5_Agrupamento_KDD99.ipynb) |
 
 As Demos 1 e 2 são sequenciais: a Demo 2 começa recriando o modelo da Demo 1. A numeração das demos é contínua ao longo das aulas; as próximas entram aqui conforme as aulas forem sendo publicadas. As Demos 3 e 4 são independentes das anteriores.
 
 ## Como rodar
 
-Cada notebook abre direto no Google Colab (botão acima). Os notebooks baixam as bases sozinhos: a Kaggle URL Dataset, a base de pagamentos e o UNSW-NB15 vêm da pasta `Datasets/` deste repositório, e a PhiUSIIL vem do UCI. Não é preciso subir arquivo na mão.
+Cada notebook abre direto no Google Colab (botão acima). Os notebooks baixam as bases sozinhos: a Kaggle URL Dataset, a base de pagamentos e o UNSW-NB15 vêm da pasta `Datasets/` deste repositório, a KDD Cup 99 (Demo 5) é baixada pelo scikit-learn (`fetch_kddcup99`), e a PhiUSIIL vem do UCI. Não é preciso subir arquivo na mão.
 
 Para rodar localmente:
 
@@ -56,6 +57,7 @@ Para rodar localmente:
 pip install pandas numpy scikit-learn matplotlib seaborn
 # Demo 4 também usa:
 pip install xgboost lightgbm dtreeviz graphviz
+# Demo 5 usa apenas scikit-learn (baixa a base sozinho)
 jupyter notebook
 ```
 
@@ -66,6 +68,7 @@ jupyter notebook
 | `url_data.csv` | Demo 1 e 2 | Kaggle, `antonyj453/urldataset` |
 | `payment_fraud.csv` | Demo 3 | Kaggle, `pwnpen/payment` (licença não informada na origem) |
 | `UNSW_NB15_training-set.csv`, `UNSW_NB15_testing-set.csv` | Demo 4 | UNSW-NB15, Moustafa, N. e Slay, J. (2015), UNSW Canberra. Uso acadêmico com citação do artigo *UNSW-NB15: a comprehensive data set for network intrusion detection systems*, MilCIS 2015 |
+| (baixada pelo scikit-learn) | Demo 5 | KDD Cup 99, subconjunto SA (10%), `fetch_kddcup99`. Base de 1999 com problemas conhecidos (registros repetidos, Tavallaee et al., 2009); serve para aprender a técnica |
 | (baixada pelo notebook) | Demo 2 | PhiUSIIL Phishing URL Dataset, UCI (id 967), CC BY 4.0. Prasad, A. e Chandra, S. (2024), *Computers & Security* |
 
 As bases pertencem aos respectivos autores. Consulte a licença e as condições de uso de cada uma antes de reutilizá-las fora do contexto da disciplina.
